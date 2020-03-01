@@ -1,0 +1,253 @@
+*{  margin:0; 
+    padding:0; 
+}
+
+@font-face {
+    font-family: "Lato-Black";
+    src: url(assets/Lato-Black.ttf) format('truetype'),
+        url(assets/Lato-BlackItalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url(assets/Lato-Bold.ttf) format('truetype'),
+        url(assets/Lato-BoldItalic.ttf) format('truetype');
+    }
+
+@font-face {
+    font-family: "Lato";
+    src: url(assets/Lato-Hairline.ttf) format('truetype'),
+        url(assets/Lato-HairlineItalic.ttf) format('truetype');
+        }
+
+@font-face {
+    font-family: "Lato";
+    src: url(assets/Lato-Medium.ttf) format('truetype'),
+        url(assets/Lato-MediumItalic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "Lato";
+    src:  url(assets/Lato-Regular.ttf) format('truetype');
+}
+
+body {
+    width: 1020px;
+    margin:0 auto;
+}
+
+.portfolio {
+    width: 1020px;
+    height: 870px;
+    background-color: #2d303a;
+}
+
+.titel-portfolio {
+    padding-top: 69px;
+    padding-left: 41px;
+    width: 121px;
+    height: 23px;
+    color: #666d89;
+    font-family: "Lato-Black";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 17.86px;
+    letter-spacing: 0.1px;
+}
+
+.text-portfolio {
+    padding-top: 23px;
+    padding-left: 41px;
+    
+    
+    color: #767e9e;
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 0.1px;
+    text-align: justify;
+}
+
+.filtr-button {
+    display: flex;
+    padding-left: 41px;
+    padding-top: 9px;
+    width: 287px;
+    justify-content: space-between;
+}
+
+/*.filtr {
+   
+    border: 1px solid #666d89;
+    text-decoration: none;
+    width: 81px;
+height: 11px;
+color: #767e9e;
+font-family: Lato;
+font-size: 12px;
+font-weight: 400;
+line-height: 21.56px;
+
+}*/
+
+
+.button {
+    border: 1px solid #666d89;
+    border-radius: 5px;
+    color:#767e9e;
+    padding: 0px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Lato;
+    font-size: 12px;  
+    font-weight: 400;
+    line-height: 21.56px;
+    cursor: pointer;
+    letter-spacing: 0.15px;
+}
+
+/*меняем цвет при наведении курсора*/
+a.button:hover {
+    color: #dedede;
+    border: 1px solid #c5c5c5;
+}
+
+
+/*.button {
+ padding: 2px 5.5px;
+
+    text-decoration: none;
+       width: 81px;
+height: 11px;
+color: #767e9e;
+font-family: Lato;
+font-size: 12px;
+font-weight: 400;
+line-height: 21.56px;
+}*/
+
+.image-portfolio {
+    width: 940px;
+    height: 601px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-left: 41px;
+    padding-top: 20px;
+}
+
+.image-example:nth-child(n+13) {
+    display: none;
+}
+
+.image-example {
+    padding-bottom: 20px;
+}
+
+.empty-portfolio {
+    width: 1020px;
+    height: 6px;
+    background-color: #323746;
+}
+
+.people {
+    display: flex;
+}
+
+.about-us {
+    
+    width: 1020px;
+    height: 728px;
+    background-color: #f2f2f2;
+}
+
+.title-aboutUs {
+    width: 150px;
+    height: 23px;
+    color: #666d89;
+    font-family: "Lato-Black";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 17.86px;
+    padding-left: 40px;
+    padding-top: 64px;
+}
+
+.text-aboutUs {
+    width: 939px;
+    height: 47px;
+    color: #767e9e;
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    padding-left: 41px;
+    padding-top: 19px;
+    text-align: justify;
+    letter-spacing: -0.33px;
+}
+
+.people {
+    display: flex;
+    width: 941px;
+    padding-top: 58px;
+    padding-left: 40px;
+    justify-content: space-between;
+}
+
+.person-Adam, .person-Desmond, .person-Scolara {
+    width: 301px;
+}
+
+.person-name {
+ 
+    overflow: hidden;        /*обрезает содержимое*/
+    white-space: nowrap;     /*текст не будет переноситься на другую строку*/
+    text-overflow: ellipsis; /*текст обрезается и к концу строки добавляется многоточие.*/
+
+    color: #666d89;
+    font-family: "Lato-Black";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 17.86px;
+    padding-top: 15px;
+    
+}
+
+.text-person {
+    width: 301px;
+    height: 32px;
+    color: #767e9e;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21.56px;
+    letter-spacing: -0.1px;
+    text-align: justify;
+    padding-top: 10px;
+}
+
+.social-networks {
+    width: 152px;
+    height: 32px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 35px;
+}
+
+.icon:hover { 
+    cursor: pointer;
+    transform: scale(1.2);
+    
+}
+
+.empty-aboutUs {
+    width: 1020px;
+    height: 6px;
+    background-color: #ffffff;
+}
+
+
