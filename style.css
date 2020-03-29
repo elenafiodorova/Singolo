@@ -40,11 +40,13 @@
 body {
     width: 1020px;
     margin:0 auto;
+    
 }
 
 .main {
     width: 1020px;
     margin:0 auto;
+  
 }
 
 .header {
@@ -94,9 +96,19 @@ body {
     color: #494e62;   
 }
 
-.nav-no-select:hover {
+/*.nav-no-select:hover {
     cursor: pointer;
-    color: #f06c64;;
+    color: #767e9e;
+}*/
+
+/*класс для активного пункта меню */
+a.active-menu {
+    color: #f06c64;
+}
+
+a:not(.active-menu):hover {
+    cursor: pointer;
+    color:   #f06c64;
 }
 
 .empty-line1 {
@@ -228,13 +240,31 @@ body {
     width: 1020px;
     height: 585px;
     background-color: #f06c64;
+    overflow: hidden; 
     /*justify-content: space-around;*/
+}
+
+ .slider-img {
+     display: block;
+    /* width: 850px; */
+    position: absolute;
+    /* height: 585px; */
+    /* background-color:#648BF0; */
+    /* overflow: hidden; */
+} 
+
+.slider1 {
+    display: flex;
+    /* width: 850px; */
+    overflow: hidden; 
+    margin-left: 59px;
 }
 
 .phone-v {
    width: 240px;
    padding-top: 53px;
    padding-left: 53px;
+   position: absolute;
 
 }
 
@@ -242,18 +272,91 @@ body {
     width: 483px;
     padding-top: 174px;
     padding-left: 73px;
+    position: absolute;
+    left: 352px;
    
 } 
+
+.itemm.active, .itemm.next {
+    display: flex;
+   
+}
+
+.itemm {
+    display: none;
+    animation: 0.5s ease-in-out;
+}
 
 .arrow-left {
    padding-top: 281px;
    padding-left: 43px;
+   z-index: 100;
 }
 .arrow-right {
     padding-top: 281px;
     padding-left: 55px;
+    z-index: 100;
+    margin-left: 850px;
  }
 
+ .to-left {
+    animation-name: left;
+ }
+
+ .to-right {
+    animation-name: right;
+    animation-direction: reverse;
+ }
+
+.from-left {
+    animation-name: left;
+    animation-direction: reverse;
+}
+
+.from-right {
+    animation-name: right;
+    
+}
+
+@keyframes left {
+    from {
+      left: 0;
+    }
+    to {
+      left: -100%;
+    }
+  }
+  
+  @keyframes right {
+    from {
+      left: 100%;
+    }
+    to {
+      left: 0;
+    }
+  }
+
+  .screen-black-vertical {
+    display: block;
+    position: absolute;
+    top: 105px;
+    left: 117px;
+  }
+
+  .screen-black-vertical.hidden-screen {
+    display: none;
+  }
+
+  .screen-black-gorizontal {
+    display: block;
+    position: absolute;
+    top: 179px;
+    left: 470px;  
+  }
+
+  .screen-black-gorizontal.hidden-screen {
+    display: none;
+  }
 
  .portfolio {
     width: 1020px;
@@ -333,6 +436,11 @@ a.button:hover {
     border: 1px solid #c5c5c5;
 }
 
+/*стиль кнопки после нажатия на ее*/
+a.active-button {
+    color: #dedede;
+    border: 1px solid #c5c5c5;
+}
 
 /*.button {
  padding: 2px 5.5px;
@@ -348,14 +456,14 @@ line-height: 21.56px;
 }*/
 
 .image-portfolio {
-    width: 940px;
+    width: 950px;
     height: 601px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: flex-start;
-    padding-left: 41px;
-    padding-top: 20px;
+    padding-left: 36px;
+    padding-top: 15px;
 }
 
 .image-example:nth-child(n+13) {
@@ -363,7 +471,14 @@ line-height: 21.56px;
 }
 
 .image-example {
-    padding-bottom: 20px;
+    margin-bottom: 10px;
+    border:5px solid #2d303a;
+    
+}
+
+/* стиль для бордера картинки*/
+img.active-img-partfolio {
+    border:5px solid #F06C64;
 }
 
 .empty-portfolio {
@@ -583,6 +698,60 @@ line-height: 21.56px;
     color: #f0d8d9;
     transition: 0.3s;
 }
+
+/* стили для блока, который появляется после нахатия кнопки Отправить*/
+
+#message-block {
+    /* position: absolute; */
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #0008;
+    position: fixed;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#message-block.hidden {
+    display: none;
+}
+
+#message {
+    /* position: absolute;
+    top: 50%;
+    left: 50%; */
+    border: 2px solid #323746;
+    text-align: center;
+    width: 250px;
+    min-height: 100px;
+    height: max-content;
+    padding: 5px 0px;
+    font-family: 'Lato';
+    font-size: 14px;
+    background-color:#f48c8f;
+    color:  #323746;
+    overflow-wrap: break-word;
+
+}
+
+#close-btn {
+    width: 40px;
+    height: 30px;
+    padding: 5px 5px;
+    border: 2px solid #323746;
+    background-color: #323746;
+    font-family: 'Lato';
+    font-size: 14px;
+    color:  #f0d8d9;
+    margin-top: 5px;
+    border-radius: 5px;
+  
+}
+/* конец стилей для блока, который появляется после нахатия кнопки Отправить*/
+
 
 .contact-information {
     margin-top: 46px;

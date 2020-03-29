@@ -6,44 +6,73 @@
     <link href="./style.css" type="text/css" rel="stylesheet">
     
    <!--<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> -->
-   
+
     
     <title>SINGOLO</title>
 </head>
 <body>
+    <!--блок всплывающего окна-->
+             
+             <div id="message-block" class="hidden">
+                <div id="message">
+                    <p>Письмо отправлено </p>
+                    </br>
+                    <span id="result-subject"></span>
+                    </br>
+                    <span id="result-describe"></span>
+                    </br>
+                    <button id="close-btn">ok</button>
+                </div>
+            </div> 
     <header class="header">
         <div class="logo">
             <h1 class="singolo-title">SINGOLO</h1>
             <span class="small-star">*</span>
         </div>
         <div class="main-navigation">
-            <nav class="navigation">
-                <a class="nav-no-select" href="#">HOME</a>
+            <a name="HOME"></a>
+            <nav class="navigation" id="menu">
+                <div><a class="nav-no-select active-menu" href="#HOME">HOME</a></div>
                 <span class="point-before">&middot;</span>
-                <a class="nav-no-select" href="#">SERVICES</a>
+                <a class="nav-no-select" href="#SERVICES">SERVICES</a>
                 <span class="point-before">&middot;</span>
-                <a class="nav-no-select" href="#">PORTFOLIO</a>
+                <a class="nav-no-select" href="#PORTFOLIO">PORTFOLIO</a>
                 <span class="point-before">&middot;</span>
-                <a class="nav-no-select" href="#">ABOUT</a>
+                <a class="nav-no-select" href="#ABOUT">ABOUT</a>
                 <span class="point-before">&middot;</span>
-                <a class="nav-no-select" href="#">CONTACT</a>
-        </nav>
+                <a class="nav-no-select" href="#CONTACT">CONTACT</a>
+            </nav>
         </div>
        
         
     </header>
+    
     <div class="empty-line1"></div>
     <main class="main">
-        <section class="slider">
-            <div class="arrow-left"><a href="#"><img class="chev" src="assets/img/chev-left.png" alt="phone vertical" /></a></div>
-            <div class="phone-v"><img class="phone-vertical" src="assets/img/iPhone_Vertical.png" alt="phone vertical" /></div>
-            <div class="phone-g"><img class="phone-gorizontal" src="assets/img/iPhone_Horizontal.png" alt="phone horizontal" /></div>
-            <div class="arrow-right"><a href="#"><img class="chev-right" src="assets/img/chev-right.png" alt="phone vertical" /></a></div>
-            
-        </section>
+        
+            <section class="slider">
+                <div class="arrow-left"><a href="#"><img class="chev" src="assets/img/chev-left.png" alt="phone vertical" /></a></div>
+                <div class="slider-img active itemm">
+                    <div class="slider1">
+                        <div class="phone-v" id="phone-v"><img class="phone-vertical" src="assets/img/iPhone_Vertical.png" alt="phone vertical" /></div>
+                        <div class="phone-g" id="phone-g"><img class="phone-gorizontal" src="assets/img/iPhone_Horizontal.png" alt="phone horizontal" /></div>
+                        <div class="screen-black-vertical hidden-screen" id="screen-black-vertical"><img class="screen-vertical" src="assets/img/Screen-vertical.png" alt="phone vertical" /></div>
+                        <div class="screen-black-gorizontal hidden-screen" id="screen-black-gorizontal"><img class="screen-gorizontal" src="assets/img/Screen-gorizontal.png" alt="phone vertical" /></div>
+                    </div>
+                    
+                </div>
+                <div class="slider-img itemm">
+                    <div class="phone-slider2"><img class="phone-slider2-img" src="assets/img/slider2.png" alt="phone slider2" /></div>
+                </div>
+                <div class="arrow-right"><a href="#"><img class="chev-right" src="assets/img/chev-right.png" alt="phone vertical" /></a></div>    
+            </section>
+        
+
         <div class="empty-line2"></div>
 
+        <a name="SERVICES"></a>
         <section class="services">
+           
             <div class="our-services">
                 <h2 class="our-services-title">Our Services</h2>
                 <div class="general-text">
@@ -98,18 +127,20 @@
         <div class="empty-services"></div>
     </main>
 
-    <div class="portfolio">
-        <h2 class="titel-portfolio">Portfolio</h2>
+    <a name="PORTFOLIO" class="hash"></a>
+    <div class="portfolio hash" id="portfolio">
+        
+        <h2 class="titel-portfolio" >Portfolio</h2>
         <div class="text-portfolio"><p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia sem nec elit.</p></div>
     
-        <div class="filtr-button">
-            <a class="button" href="#">All</a>
-            <a class="button" href="#">Web Design</a>
-            <a class="button" href="#">Graphic Design</a>
-            <a class="button" href="#">Artwork</a>
+        <div class="filtr-button" id="filter-button">
+            <a class="button" href="#portfolio">All</a>
+            <a class="button" href="#portfolio">Web Design</a>
+            <a class="button" href="#portfolio">Graphic Design</a>
+            <a class="button" href="#portfolio">Artwork</a>
         </div>
 
-        <div class="image-portfolio">
+        <div class="image-portfolio" id="image-portfolio">
             <img class="image-example" src="assets/img/image1.png" alt="photo 1"/>
             <img class="image-example" src="assets/img/image2.png" alt="photo 2"/>
             <img class="image-example" src="assets/img/image3.png" alt="photo 3"/>
@@ -122,12 +153,7 @@
             <img class="image-example" src="assets/img/image10.png" alt="photo 10"/>
             <img class="image-example" src="assets/img/image11.png" alt="photo 11"/>
             <img class="image-example" src="assets/img/image12.png" alt="photo 12"/>
-            <img class="image-example" src="assets/img/image1.png" alt="photo 1"/>
-            <img class="image-example" src="assets/img/image2.png" alt="photo 2"/>
-            <img class="image-example" src="assets/img/image3.png" alt="photo 3"/>
-            <img class="image-example" src="assets/img/image4.png" alt="photo 4"/>
-            <img class="image-example" src="assets/img/image5.png" alt="photo 5"/>
-            <img class="image-example" src="assets/img/image6.png" alt="photo 6"/>
+            
         </div>
 
        
@@ -135,7 +161,9 @@
     </div>
     <div class="empty-portfolio"></div>
 
-    <div class="about-us">
+    <a name="ABOUT" class="hash"></a>
+    <div class="about-us hash">
+        
         <h2 class="title-aboutUs">About Us</h2>
         <div class="text-aboutUs"><p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p></div>
         
@@ -143,7 +171,7 @@
 
             <div class="person-Adam">
                 <object class="person1" type="image/png" data="assets/img/person1.png"></object>
-                <h4 class="person-name">Adam Jensen pppppppp ppppppppppppppppppppppppppppppppppp</h4>
+                <h4 class="person-name">Adam Jensen</h4>
                 <div class="text-person"><p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p></div>
                 <div class="social-networks">
                     <a href="#"><object class="icon" type="image/png" data="assets/img/icon-facebook.png"></object></a>
@@ -183,6 +211,7 @@
     <div class="empty-aboutUs"></div>
 
     <div class="content-quote">
+        
         <div class="quote">
             <h2 class="quote-title">Get a Quote</h2>
             <div class="quote-text">
@@ -192,14 +221,18 @@
          <div class="main-quote-form">
              <div class="form-for-submit">
                  <form class="quote-form" method="POST">
-                     <input required class="input-name input-content" type="text" placeholder="Name (Required)">
-                     <input required class="input-email input-content" type="email" placeholder="Email (Required)">
-                     <input required class="input-subject input-content" type="text" placeholder="Subject">
-                     <textarea required class="input-detail input-content" placeholder="Describe your project in detail..."></textarea>
-                     <input class="button-submit" type="submit" value="Submit">
+                     <input required class="input-name input-content" type="text" placeholder="Name (Required)" id="input-name" >
+                     <input required class="input-email input-content" type="email" placeholder="Email (Required)" id="input-email">
+                     <input class="input-subject input-content" type="text" placeholder="Subject" id="subject">
+                     <textarea class="input-detail input-content" placeholder="Describe your project in detail..." id="describe"></textarea>
+                     <input class="button-submit" type="submit" value="Submit"  id="btn">
+                    
                  </form>
              </div>
+             
+
              <div class="contact-information">
+                <a name="CONTACT"></a>
                  <h4 class="contact-information-title">Contact Information</h4>
                  <div class="contact-information-text">
                      <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
@@ -242,5 +275,6 @@
             <a href="#"><object class="footer-icon" type="image/png" data="assets/img/footerLinkedIn.png"></object></a>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
